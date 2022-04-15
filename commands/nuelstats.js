@@ -22,32 +22,29 @@ module.exports.run = async (Client, message, args) => {
           return Array.from(document.querySelectorAll(" div.PDText > div.PDName > a")).map(x => x.textContent)
       })
       let broken = false;
-      for (let i = 0; i < data.length; i++) {
-          console.log(headings[i])
-          console.log(data[i])
-
-          if (data[i] === "undefined" || headings[i] === "undefined") {
+console.log(headings[1])
+          if (data[1] === undefined || headings[1] === undefined) {
               broken = true;
+              console.log(broken)
           }
-      }
       
 
 if (broken === false) {
-    function embedCreateAndSend() {
         const statsEmbed = new MessageEmbed()
           .setColor("GREEN")
           .setTitle(`Stats for ${playerName}`)
           .setDescription("Stats")
-          for (let i = 0; i < 8; i++) {
+          for (let i = 0; i < headings.length; i++) {
               statsEmbed.addField(`${headings[i]}`,`${data[i]}`)               
           }
     
           message.channel.send({embeds: [statsEmbed]});
-        }
-    
-        setTimeout(embedCreateAndSend,1500)
+
 }
 else {
+
+ 
+
     const statsEmbed = new MessageEmbed()
       .setColor("RED")
       .setTitle(`Stats for ${playerName} unavaliable`)
