@@ -47,7 +47,7 @@ if (broken === false) {
           .setTitle(`Stats for ${playerName}`)
           .setDescription("Stats")
           for (let i = 0; i < headings.length; i++) {
-              statsEmbed.addField(`${headings[i]}`,`${data[i]}`)               
+              statsEmbed.addField(`${headings[i]}`,`${data[i]}`, true)               
           }
     
           message.channel.send({embeds: [statsEmbed]});
