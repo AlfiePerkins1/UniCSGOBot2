@@ -35,22 +35,7 @@ client.on('ready', () => {
 	// When bot comes online
 	console.log(`Bot online as ${client.user.tag}`);
 
-	(async () => {  try {
-		const gs = new Sheets('1-OA3YpObVKpwi-Tx6F-F2dipr-oCIxPgiN-MxQXxpJM');
-		const authData = require('./GoogleCredentials.json');
-		await gs.authorizeJWT(authData);
-		const table = await gs.tables('Main - updated');
-		//console.log(table.headers);
-		//console.log(table.formats);
-		//console.log(table.rows);
-		//Adding all rows to an array
-		for (let i = 0; i < table.rows.length; i++) {
-			nseStatsRows[i] = table.rows[i];
-		}
-		console.log(nseStatsRows[14]);
-    console.log(nseStatsRows.length);
-	} catch (err) { 
-		console.error(err);  }})();
+	
 
 });
 
