@@ -57,17 +57,6 @@ client.on('messageCreate', message => {
     console.log( "Message sent by: " + message.author.username );
   }
 
-  message.guild.members.fetch().then(members =>
-    {
-      console.log("Here")
-        // Loop through every members
-      members.forEach(member =>
-        {
-          const activity = member.presence.activities[0];
-          console.log(activity)
-          console.log("Here1")
-        });
-});
   
 })
 
