@@ -1,15 +1,13 @@
-//import discordjs, { client, Intents } from 'discord.js'
 const discordjs = require("discord.js");
-//import dotenv from 'dotenv';
 const dotenv = require("dotenv");
-//import * as fs from 'fs';
 const fs = require("fs");
 const axios = require("axios");
 const puppeteer = require('puppeteer');
+const mongoose = require("mongoose");
 const client = new discordjs.Client({ intents: [ 'GUILDS', 'GUILD_MESSAGES' ] });
 const Sheets = require("node-sheets").default;
 const nseStatsRows = [];
-//client.commands = new discordjs.Collection();
+const mongoose = require("mongoose");
 client.commands = new discordjs.Collection();
 dotenv.config();
 const prefix = '+';

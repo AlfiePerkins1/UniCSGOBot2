@@ -19,9 +19,10 @@ module.exports = {
 			"windows"
 		],
 		"semi": [
-			"fix",
+			"warn",
 			"always"
 		],
-		"no-unused-vars": 0
+		"no-unused-vars": 0,
+		"no-undef": "off"
 	}
 };
