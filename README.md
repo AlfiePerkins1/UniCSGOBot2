@@ -10,3 +10,5 @@ Todo:
 -Edit config command
 
 - More indepth stats
+- Stats comparison
+- Add/remove commands
