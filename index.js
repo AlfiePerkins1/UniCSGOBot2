@@ -56,7 +56,7 @@ client.on('messageCreate', message => {
 				serverN: message.guild.name, 
 				serverID: message.guild.id,
 				prefix: "+",
-				commands: ["test.js","nuelstats.js"]
+				commands: ["nsestats","nuelstats"]
         
 			});
 
@@ -80,13 +80,14 @@ client.on('messageCreate', message => {
 				serverID: message.guild.id
 			}, (err, result) => {
 				console.log(`Commands ${result.commands}`);
+				console.log(`Execution command ${JSON.stringify(commandfile, null, 2)}`);
 
-				console.log(`Includes; ${result.commands.includes(commandfile)}`)
-				if (commandfile && result.commands.includes(commandfile)) {
+				console.log(`Includes; ${result.commands.includes(commandfile.help.name)}`);
+				if (commandfile && result.commands.includes(commandfile.help.name)) {
 					commandfile.run(client, message,args);
 				}
 				else {
-					message.reply(`This server does not have access to ${cmd}`)
+					message.reply(`This server does not have access to ${cmd}`);
 					console.log( "Message sent by: " + message.author.username );
 				}
 
