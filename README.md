@@ -1,4 +1,12 @@
 # UniCSGOBot
- 
+
  NUEL stats accessed by +nuelstats STEAMID
- NSE stats currently only avaliable on console, WIP 
+ NSE stats accessed by +nsestats NSEUSERNAME
+
+
+
+Todo:
+
+-Edit config command
+
+- More indepth stats
